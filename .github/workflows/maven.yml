@@ -21,6 +21,13 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
+
+    - name: java build files
+      run: javac *.java
+
+    - name: run java program
+      run: java WebTest
+      
     - name: Build with Maven
       run: maven clean install
    
