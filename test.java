@@ -1,6 +1,4 @@
-#!/bin/bash
 
-############ this is test
 
 import java.io.IOException;
 import javax.servlet.ServletException;
