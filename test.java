@@ -15,16 +15,14 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
-        String user = request.getParameter("username");
-        String pass = request.getParameter("password");
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
 
         response.setContentType("text/html");
-        if (USERNAME.equals(user) && PASSWORD.equals(pass)) {
-            response.getWriter().println("<h2>Login Successful!</h2>");
+        if (USERNAME.equals(username) && PASSWORD.equals(password)) {
+            response.getWriter().println("<h2>Login successful!</h2>");
         } else {
-            response.getWriter().println("<h2>Invalid Credentials</h2>");
+            response.getWriter().println("<h2>Invalid credentials</h2>");
         }
     }
 }
-
